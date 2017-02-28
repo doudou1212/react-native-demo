@@ -7,6 +7,7 @@
 import React, { Component } from 'react';
 import SearchBarComponent from './src/component/SearchBarComponent';
 import FreeComponent from './src/component/FreeComponent';
+import NewlyComponent from './src/component/NewlyComponent';
 import {
   AppRegistry,
   StyleSheet,
@@ -20,6 +21,7 @@ class DouBanDemo extends Component {
     return (
       <View style={styles.container}>
         <SearchBarComponent />
+        <NewlyComponent />
         <FreeComponent />
       </View>
     );

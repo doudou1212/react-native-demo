@@ -1,8 +1,11 @@
 import React, {Component} from 'react';
-import {StyleSheet} from 'react-native'
+import {StyleSheet, Dimensions} from 'react-native'
+
+var windowLength = Dimensions.get('window');
 
 const SearchBarComponentStyle = StyleSheet.create({
   container: {
+    flex: 1,
     backgroundColor: '#F8F8F8',
     marginTop: 50,
     borderBottomColor: '#E2E6E5',

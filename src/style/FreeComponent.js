@@ -2,6 +2,9 @@ import React, {Component} from 'react';
 import {StyleSheet} from 'react-native'
 
 const FreeComponentStyle = StyleSheet.create({
+  freeContainer: {
+    flex:5
+  },
   titleContainer: {
     marginTop: 15,
     marginBottom: 15

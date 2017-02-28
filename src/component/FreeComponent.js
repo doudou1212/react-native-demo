@@ -9,7 +9,7 @@ import {
 class FreeComponent extends Component {
   render() {
     return (
-      <View>
+      <View style={FreeComponentStyle.freeContainer}>
         <View style={FreeComponentStyle.titleContainer}>
           <Text style={FreeComponentStyle.title}>免费作品</Text>
         </View>
