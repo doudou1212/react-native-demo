@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {StyleSheet, Dimensions} from 'react-native'
 
-var windowLength = Dimensions.get('window');
+let winSize = Dimensions.get('window');
 
 const SearchBarComponentStyle = StyleSheet.create({
   container: {

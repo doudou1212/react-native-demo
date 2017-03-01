@@ -7,10 +7,13 @@ import {
   Text,
   Image,
   ScrollView
-} from 'react-native'
+} from 'react-native';
+
+import newlyBookInfoAction from "../actions/newlyBookInfoAction";
 
 class NewlyComponent extends Component {
   render() {
+    console.log("state is ", this.props.newlyBookInfo);
     return (
       <View style={NewlyComponentStyle.scrollContainer}>
         <Text style={NewlyComponentStyle.tilteContainer}>本周新上架</Text>
@@ -26,4 +29,18 @@ class NewlyComponent extends Component {
   }
 }
 
-export default NewlyComponent;
+
+function mapStateToProps(state) {
+  return {
+    newlyBookInfo: state
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    newlyBookInfoAction: bindActionCreators(newlyBookInfoAction, dispatch)
+  };
+}
+
+const NewlyComponentContainer = connect(mapStateToProps, mapDispatchToProps)(NewlyComponent);
+export default NewlyComponentContainer;

@@ -9,9 +9,6 @@ import {
 
 class SearchBarComponent extends Component {
   render() {
-    var searchIcon = (<Image
-      style={SearchBarComponentStyle.searchIcon}
-      source={require('../../images/Search-50.png')}/>);
     return (
       <View style={SearchBarComponentStyle.container}>
         <TextInput
