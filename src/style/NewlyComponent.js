@@ -4,8 +4,6 @@ import {StyleSheet} from 'react-native';
 const NewlyComponentStyle = StyleSheet.create({
   scrollContainer: {
     flex: 4,
-    backgroundColor: 'green',
-    width: 400
   },
   tilteContainer: {
     marginTop: 10,
@@ -13,6 +11,7 @@ const NewlyComponentStyle = StyleSheet.create({
     fontFamily: 'Times',
     fontWeight: 'bold',
     fontSize: 20,
+    width:420
   },
   scroll: {
     width: 380

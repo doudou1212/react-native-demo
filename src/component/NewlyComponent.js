@@ -18,6 +18,8 @@ class NewlyComponent extends Component {
                     horizontal={true}
                     style={NewlyComponentStyle.scroll}>
           <NewlyBookComponent />
+          <NewlyBookComponent />
+          <NewlyBookComponent />
         </ScrollView>
       </View>
     )

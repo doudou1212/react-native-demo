@@ -3,7 +3,7 @@ import {StyleSheet} from 'react-native'
 
 const FreeComponentStyle = StyleSheet.create({
   freeContainer: {
-    flex:5
+    flex:5,
   },
   titleContainer: {
     marginTop: 15,

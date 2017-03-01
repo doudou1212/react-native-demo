@@ -13,7 +13,7 @@ class BottomBarComponent extends Component {
       <View style={BottomBarComponentStyle.bottomBarContainer}>
         <TabBarIOS unselectedTintColor="#47474A"
                    tintColor="#3E4245"
-                   unselectedItemTintColor="red"
+                   unselectedItemTintColor="#5A5859"
                    barTintColor="#EAE9E7"
                    style={BottomBarComponentStyle.tabBarContainer}>
           <TabBarIOS.Item title="原创" icon={require('../../images/pen.png')}>
