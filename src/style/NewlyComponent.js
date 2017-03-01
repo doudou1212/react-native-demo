@@ -4,6 +4,9 @@ import {StyleSheet} from 'react-native';
 const NewlyComponentStyle = StyleSheet.create({
   scrollContainer: {
     flex: 4,
+    borderBottomColor: '#E2E6E5',
+    borderStyle: 'solid',
+    borderBottomWidth: 1
   },
   tilteContainer: {
     marginTop: 10,

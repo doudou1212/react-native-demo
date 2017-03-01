@@ -3,11 +3,10 @@ import {StyleSheet} from 'react-native'
 
 const BottomBarComponentStyle = StyleSheet.create({
   bottomBarContainer: {
-    flex:1,
+    flex:10,
   },
   tabBarContainer: {
     width:420,
-    marginBottom: 3
   },
   tabContent: {
     flex: 1,

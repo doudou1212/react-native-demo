@@ -18,6 +18,7 @@ const NewlyBookComponentStyle = StyleSheet.create({
   newlyBookImage: {
     width: 100,
     height:150,
+    marginBottom:15
   },
   newlyBookName: {
     fontSize: 18,
