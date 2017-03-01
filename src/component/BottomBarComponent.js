@@ -16,12 +16,12 @@ class BottomBarComponent extends Component {
                    unselectedItemTintColor="red"
                    barTintColor="#EAE9E7"
                    style={BottomBarComponentStyle.tabBarContainer}>
-          <TabBarIOS.Item title="原创">
+          <TabBarIOS.Item title="原创" icon={require('../../images/pen.png')}>
           </TabBarIOS.Item>
-          <TabBarIOS.Item title="书店"></TabBarIOS.Item>
-          <TabBarIOS.Item title="分类"></TabBarIOS.Item>
-          <TabBarIOS.Item title="我的"></TabBarIOS.Item>
-          <TabBarIOS.Item title="本地"></TabBarIOS.Item>
+          <TabBarIOS.Item title="书店" icon={require('../../images/bookshop.png')}></TabBarIOS.Item>
+          <TabBarIOS.Item title="分类" icon={require('../../images/classify.png')}></TabBarIOS.Item>
+          <TabBarIOS.Item title="我的" icon={require('../../images/mine.png')}></TabBarIOS.Item>
+          <TabBarIOS.Item title="本地" icon={require('../../images/local.png')}></TabBarIOS.Item>
 
         </TabBarIOS>
       </View>
