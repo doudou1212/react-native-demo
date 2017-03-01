@@ -4,17 +4,19 @@
  * @flow
  */
 
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import SearchBarComponent from './src/component/SearchBarComponent';
 import FreeComponent from './src/component/FreeComponent';
 import NewlyComponent from './src/component/NewlyComponent';
-import BottomBarComponent from './src/component/BottomBarComponent'
+import BottomBarComponent from './src/component/BottomBarComponent';
+import AdComponent from './src/component/AdComponent';
 import {
   AppRegistry,
   StyleSheet,
   Text,
   View,
   TextInput,
+  ScrollView
 } from 'react-native'
 
 class DouBanDemo extends Component {
@@ -22,8 +24,13 @@ class DouBanDemo extends Component {
     return (
       <View style={styles.container}>
         <SearchBarComponent />
-        <NewlyComponent />
-        <FreeComponent />
+        <View style={styles.contentContainer}>
+          <ScrollView horizontal={false} automaticallyAdjustContentInsets={false}>
+            <AdComponent />
+            <NewlyComponent />
+            <FreeComponent />
+          </ScrollView>
+        </View>
         <BottomBarComponent />
       </View>
     );
@@ -36,6 +43,9 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     alignItems: 'center',
     backgroundColor: '#F8F8F8'
+  },
+  contentContainer: {
+    flex: 9
   }
 });
 
