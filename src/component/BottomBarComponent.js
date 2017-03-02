@@ -1,15 +1,10 @@
 import React, {Component} from 'react';
 import BottomBarComponentStyle from '../style/BottomBarComponent';
-import FreeComponent from './FreeComponent';
-import NewlyComponentContainer from './NewlyComponent';
-import SearchBarComponent from './SearchBarComponent';
-import AdComponent from './AdComponent';
+import OriginalBookComponent from './OriginalBookComponent';
 import {
   View,
   Text,
-  Image,
   TabBarIOS,
-  ScrollView,
   StyleSheet
 } from 'react-native'
 
@@ -17,18 +12,6 @@ class BottomBarComponent extends Component {
   state = {
     selectedTab: '1',
   };
-
-  renderContent() {
-    return(
-      <View style={styles.contentContainer}>
-      <ScrollView horizontal={false} automaticallyAdjustContentInsets={false}>
-        <SearchBarComponent />
-        <AdComponent />
-        <NewlyComponentContainer />
-        <FreeComponent />
-      </ScrollView>
-    </View>);
-  }
 
   render() {
     return (
@@ -46,7 +29,7 @@ class BottomBarComponent extends Component {
                                 selectedTab: '1',
                               });
                           }}>
-            {this.renderContent()}
+            <OriginalBookComponent />
           </TabBarIOS.Item>
           <TabBarIOS.Item title="书店"
                           icon={require('../../images/bookshop.png')}
@@ -99,12 +82,5 @@ class BottomBarComponent extends Component {
     )
   }
 }
-
-const styles = StyleSheet.create({
-  contentContainer: {
-    flex: 9
-  }
-});
-
 
 export default BottomBarComponent;
