@@ -8,6 +8,13 @@ import {
 } from 'react-native'
 
 class SearchBarComponent extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      text: '',
+    };
+  }
+
   render() {
     return (
       <View style={SearchBarComponentStyle.container}>

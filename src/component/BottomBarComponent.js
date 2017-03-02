@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import BottomBarComponentStyle from '../style/BottomBarComponent';
 import FreeComponent from './FreeComponent';
 import NewlyComponentContainer from './NewlyComponent';
+import SearchBarComponent from './SearchBarComponent';
 import AdComponent from './AdComponent';
 import {
   View,
@@ -21,6 +22,7 @@ class BottomBarComponent extends Component {
     return(
       <View style={styles.contentContainer}>
       <ScrollView horizontal={false} automaticallyAdjustContentInsets={false}>
+        <SearchBarComponent />
         <AdComponent />
         <NewlyComponentContainer />
         <FreeComponent />
