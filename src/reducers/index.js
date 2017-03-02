@@ -2,7 +2,7 @@ import { combineReducers } from "redux";
 import newlyBookInfoReducer from './newlyBookInfoReducer'
 
 const rootReducer = combineReducers({
-  newlyBookInfos: newlyBookInfoReducer
+  newlyBooks: newlyBookInfoReducer
 });
 
 export default rootReducer;
