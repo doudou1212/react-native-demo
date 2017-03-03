@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import BottomBarComponentStyle from '../style/BottomBarComponent';
-import OriginalBookComponent from './OriginalBookComponent';
+import OriginalBookComponentContainer from './OriginalBookComponent';
 import {
   View,
   Text,
@@ -29,7 +29,7 @@ class BottomBarComponent extends Component {
                                 selectedTab: '1',
                               });
                           }}>
-            <OriginalBookComponent />
+            <OriginalBookComponentContainer />
           </TabBarIOS.Item>
           <TabBarIOS.Item title="书店"
                           icon={require('../../images/bookshop.png')}

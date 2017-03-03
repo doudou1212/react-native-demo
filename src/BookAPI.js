@@ -57,6 +57,10 @@ const BookAPI = {
 
   getNewlyBookInfo: (id) => new Promise((resolve, reject) => {
     BookAPI._simpleGet(DOUBAN_API + id, resolve, reject);
+  }),
+
+  searchBookInfo: (param) => new Promise((resolve, reject) => {
+    BookAPI._simpleGet(DOUBAN_API + '/search?' + param, resolve, reject);
   })
 };
 
