@@ -1,6 +1,4 @@
 import React, {Component} from 'react';
-import {connect} from "react-redux";
-import {bindActionCreators} from "redux";
 import NewlyComponentStyle from '../style/NewlyComponent';
 import NewlyBookComponent from './NewlyBookComponent';
 import {
@@ -10,15 +8,9 @@ import {
   ScrollView
 } from 'react-native';
 
-import * as newlyBookInfoAction from "../actions/newlyBookInfoAction";
 
 class NewlyComponent extends Component {
-  componentWillMount() {
-    this.props.newlyBookInfoAction.getBookInfo(4238362);
-  }
-
   render() {
-    console.log("state is ", this.props.newlyBookInfo);
     const bookInfo = this.props.newlyBookInfo;
     if (this.props.newlyBookInfo.title) {
       return (
@@ -38,17 +30,4 @@ class NewlyComponent extends Component {
 }
 
 
-function mapStateToProps(state) {
-  return {
-    newlyBookInfo: state.newlyBooks.newlyBookInfos
-  };
-}
-
-function mapDispatchToProps(dispatch) {
-  return {
-    newlyBookInfoAction: bindActionCreators(newlyBookInfoAction, dispatch)
-  };
-}
-
-const NewlyComponentContainer = connect(mapStateToProps, mapDispatchToProps)(NewlyComponent);
-export default NewlyComponentContainer;
+export default NewlyComponent;

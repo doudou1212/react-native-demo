@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import FreeComponent from './FreeComponent';
-import NewlyComponentContainer from './NewlyComponent';
+import NewlyComponent from './NewlyComponent';
 import SearchBarComponent from './SearchBarComponent';
 import AdComponent from './AdComponent';
 import {connect} from "react-redux";
@@ -13,13 +13,18 @@ import {
 } from 'react-native';
 
 import * as searchBookInfoAction from "../actions/searchBookAction";
+import * as newlyBookInfoAction from "../actions/newlyBookInfoAction";
 
 class OriginalBookComponent extends Component {
-  shouldComponentUpdate(nextProps, nextState) {
-    if(nextProps.searchBookInfo != this.props.searchBookInfo) {
-      return true;
+  componentWillMount() {
+    this.props.newlyBookInfoAction.getBookInfo(4238362);
+  }
+
+  shouldComponentUpdate(nextProps) {
+    if(nextProps == this.props) {
+      return false;
     }
-    return false;
+    return true;
   }
 
   renderContent() {
@@ -33,7 +38,7 @@ class OriginalBookComponent extends Component {
       return (
         <View>
           <AdComponent />
-          <NewlyComponentContainer />
+          <NewlyComponent newlyBookInfo={this.props.newlyBookInfo}/>
           <FreeComponent />
         </View>
       );
@@ -59,13 +64,15 @@ const styles = StyleSheet.create({
 
 function mapStateToProps(state) {
   return {
-    searchBookInfo: state.searchBooks.searchBookInfos
+    searchBookInfo: state.searchBooks.searchBookInfos,
+    newlyBookInfo: state.newlyBooks.newlyBookInfos
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    searchBookInfoAction: bindActionCreators(searchBookInfoAction, dispatch)
+    searchBookInfoAction: bindActionCreators(searchBookInfoAction, dispatch),
+    newlyBookInfoAction: bindActionCreators(newlyBookInfoAction, dispatch)
   };
 }
 
