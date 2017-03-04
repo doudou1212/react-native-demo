@@ -5,6 +5,7 @@ import SearchBarComponent from './SearchBarComponent';
 import AdComponent from './AdComponent';
 import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
+import SearchResultsComponent from './SearchResultsComponent'
 import {
   View,
   ScrollView,
@@ -28,10 +29,10 @@ class OriginalBookComponent extends Component {
   }
 
   renderContent() {
-    if (this.props.searchBookInfo.books && this.props.searchBookInfo.books.length > 0) {
+    if (this.props.searchBookInfo.books) {
       return (
         <View>
-          <Text>hhhh</Text>
+          <SearchResultsComponent books={this.props.searchBookInfo.books}/>
         </View>
       );
     } else {

@@ -8,7 +8,6 @@ import {
 
 class NewlyBookComponent extends Component {
   render() {
-    console.log("props is ", this.props);
     return (
       <View style={NewlyBookComponentStyle.newlyBookContainer}>
         <View style={NewlyBookComponentStyle.newlyBookImageContainer}>
@@ -18,7 +17,7 @@ class NewlyBookComponent extends Component {
           <Text style={NewlyBookComponentStyle.newlyBookName}>{this.props.title}</Text>
           <Text style={NewlyBookComponentStyle.newlyBookAuthor}>{this.props.author || '佚名'}</Text>
           <Text style={NewlyBookComponentStyle.newlyBookIntroduce}
-                numberOfLines={4}>{this.props.summary}</Text>
+                numberOfLines={4}>{this.props.summary || '无描述'}</Text>
         </View>
       </View>
     )

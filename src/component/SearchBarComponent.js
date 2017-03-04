@@ -16,7 +16,6 @@ class SearchBarComponent extends Component {
   }
 
   search(text) {
-    console.log("bbbbbbbb");
     this.setState({text});
     this.props.searchBooks("q="+text);
   }
