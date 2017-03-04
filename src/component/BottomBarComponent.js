@@ -39,8 +39,8 @@ class BottomBarComponent extends Component {
                                 selectedTab: '2',
                               });
                           }}>
-            <View>
-              <Text>买什么买！快滚去干活！</Text>
+            <View style={BottomBarComponentStyle.booStoreContainer}>
+              <Text style={BottomBarComponentStyle.otherText}>买什么买！快滚去干活！</Text>
             </View>
           </TabBarIOS.Item>
           <TabBarIOS.Item title="分类" icon={require('../../images/classify.png')}
@@ -50,8 +50,8 @@ class BottomBarComponent extends Component {
                                 selectedTab: '3',
                               });
                           }}>
-            <View>
-              <Text>哎呀，我也不懂分类算法，不分了。</Text>
+            <View style={BottomBarComponentStyle.classifyContainer}>
+              <Text style={BottomBarComponentStyle.otherText}>哎呀，我也不懂分类算法，不分了。</Text>
             </View>
           </TabBarIOS.Item>
           <TabBarIOS.Item title="我的" icon={require('../../images/mine.png')}
@@ -61,8 +61,8 @@ class BottomBarComponent extends Component {
                                 selectedTab: '4',
                               });
                           }}>
-            <View>
-              <Text>你啥都没有哦～亲</Text>
+            <View style={BottomBarComponentStyle.mineContainer}>
+              <Text style={BottomBarComponentStyle.otherText}>你啥都没有哦～亲</Text>
             </View>
           </TabBarIOS.Item>
           <TabBarIOS.Item title="本地" icon={require('../../images/local.png')}
@@ -72,8 +72,8 @@ class BottomBarComponent extends Component {
                                 selectedTab: '5',
                               });
                           }}>
-            <View>
-              <Text>本地是空哒！哈哈！傻了吧～</Text>
+            <View style={BottomBarComponentStyle.localContainer}>
+              <Text style={BottomBarComponentStyle.otherText}>本地是空哒！哈哈！傻了吧～</Text>
             </View>
           </TabBarIOS.Item>
 
